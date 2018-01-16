@@ -1,0 +1,83 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sun Nov 05 00:55:11 2017
+| Host         : LAPTOP-VOM5DAG2 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file AUDIO_FX_TOP_control_sets_placed.rpt
+| Design       : AUDIO_FX_TOP
+| Device       : xc7a35t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    30 |
+| Unused register locations in slices containing registers |   117 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             235 |          155 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             219 |           59 |
+| Yes          | No                    | No                     |              24 |           10 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              21 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+----------------------------+------------------------------------------+------------------+----------------+
+|            Clock Signal           |        Enable Signal       |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-----------------------------------+----------------------------+------------------------------------------+------------------+----------------+
+|  vc/buttonD/toggle_reg            |                            |                                          |                1 |              1 |
+|  clk50M/clk_50M                   |                            |                                          |                1 |              1 |
+|  pb/debouncer/toggle_reg          |                            |                                          |                1 |              1 |
+|  u2/J_DA2_Pin4_OBUF               |                            |                                          |                1 |              2 |
+|  vc/buttonD/clk5Hz/clk_5Hz        |                            |                                          |                1 |              2 |
+|  pb/debouncer/clk5Hz/Q1_reg       |                            |                                          |                1 |              2 |
+|  u2/J_DA2_Pin4_OBUF               | u2/shiftCounter[3]_i_1_n_0 | u2/temp1[15]_i_1_n_0                     |                1 |              4 |
+|  u2/J_DA2_Pin4_OBUF               | u2/temp2                   | u2/temp1[15]_i_1_n_0                     |                1 |              4 |
+|  nolabel_line84/clk8k/current_clk |                            |                                          |                4 |              7 |
+|  CLK_IBUF_BUFG                    |                            | clk20k/COUNT[11]_i_1_n_0                 |                3 |             11 |
+|  u2/J_DA2_Pin4_OBUF               | u2/temp2                   |                                          |                7 |             12 |
+|  CLK_IBUF_BUFG                    |                            | nolabel_line84/clk8k/COUNT[12]_i_1_n_0   |                3 |             12 |
+|  CLK_IBUF_BUFG                    |                            | J_MIC3_Pin1_OBUF_BUFG                    |                3 |             12 |
+|  J_MIC3_Pin1_OBUF_BUFG            | vc/maximum[11]_i_1_n_0     |                                          |                3 |             12 |
+| ~u1/J_MIC3_Pin4_OBUF              |                            |                                          |                5 |             12 |
+|  J_MIC3_Pin1_OBUF_BUFG            | fasterPitch_IBUF           | nolabel_line80/offset[11]_i_1_n_0        |                4 |             13 |
+|  clk20k/current_clk               |                            |                                          |                4 |             13 |
+|  nolabel_line84/clk8k/current_clk |                            | nolabel_line84/COUNT[15]_i_1_n_0         |                4 |             15 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkLA/COUNT[16]_i_1__0_n_0           |                4 |             16 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkSO/COUNT[16]_i_1_n_0              |                4 |             16 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkDO/COUNT[17]_i_1_n_0              |                5 |             17 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkFA/COUNT[17]_i_1__1_n_0           |                5 |             17 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkMI/COUNT[17]_i_1__0_n_0           |                5 |             17 |
+|  CLK_IBUF_BUFG                    |                            | ins/clkRE/COUNT[17]_i_1__2_n_0           |                5 |             17 |
+|  CLK_IBUF_BUFG                    |                            | vc/buttonD/clk5Hz/COUNT[23]_i_1_n_0      |                6 |             23 |
+|  CLK_IBUF_BUFG                    |                            | clk5/COUNT[23]_i_1__1_n_0                |                6 |             23 |
+|  CLK_IBUF_BUFG                    |                            | pb/debouncer/clk5Hz/COUNT[23]_i_1__0_n_0 |                6 |             23 |
+|  clk5/CLK                         |                            |                                          |               13 |             28 |
+|  CLK_IBUF_BUFG                    |                            |                                          |               29 |             46 |
+|  J_MIC3_Pin1_OBUF_BUFG            |                            |                                          |             1350 |           5088 |
++-----------------------------------+----------------------------+------------------------------------------+------------------+----------------+
+
+
